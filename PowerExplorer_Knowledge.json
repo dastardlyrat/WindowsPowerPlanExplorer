@@ -1,0 +1,127 @@
+{
+  "schema": "power-explorer-knowledge/v1",
+  "collected": "2026-10-23",
+  "method": "Curated paraphrases of Microsoft Learn documentation; setting GUIDs identify references, not guaranteed hardware applicability. Runtime AC/DC values and permitted choices are read locally from Windows.",
+  "settings": [
+    {
+      "guid": "893dee8e-2bef-41e0-89c6-b55d0929964c",
+      "alias": "PROCTHROTTLEMIN",
+      "summary": "Minimum processor performance target, expressed as a percentage of maximum processor performance.",
+      "caution": "May interact with hardware-managed performance and silicon-vendor tuning; does not guarantee a fixed clock rate.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/options-for-perf-state-engine-minperformance"
+    },
+    {
+      "guid": "bc5038f7-23e0-4960-96da-33abaf5935ec",
+      "alias": "PROCTHROTTLEMAX",
+      "summary": "Upper bound for the processor performance target, as a percentage of maximum processor performance.",
+      "caution": "Changing it can reduce peak CPU capability. Firmware, thermal constraints, and the processor's power model still apply.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/options-for-perf-state-engine-maxperformance"
+    },
+    {
+      "guid": "be337238-0d82-4146-a960-4f3749d470c7",
+      "alias": "PERFBOOSTMODE",
+      "summary": "Controls how the processor selects performance above its nominal level, where supported.",
+      "caution": "The meaning of aggressive/enabled varies by ACPI, CPPC/PEP, and autonomous processor modes. Follow the platform vendor's tuning guidance.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/options-for-perf-state-engine-perfboostmode"
+    },
+    {
+      "guid": "29f6c1db-86da-48c5-9fdb-f2b67b1f44da",
+      "alias": "STANDBYIDLE",
+      "summary": "Idle time in seconds before Windows attempts automatic system sleep.",
+      "caution": "0 disables idle-triggered sleep. Available sleep states must be checked separately with powercfg /a.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/sleep-settings-sleep-idle-timeout"
+    },
+    {
+      "guid": "94ac6d29-73ce-41a6-809f-6363ba21b47e",
+      "alias": "HYBRIDSLEEP",
+      "summary": "Selects whether Windows may use hybrid sleep when the platform supports it.",
+      "caution": "Modern Standby systems and other platforms might not support the corresponding sleep state.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/sleep-settings-hybrid-sleep"
+    },
+    {
+      "guid": "abfc2519-3608-4c2a-94ea-171b0ed546ab",
+      "alias": "ALLOWSTANDBY",
+      "summary": "Controls availability of legacy ACPI S1/S2/S3 standby states in the power plan.",
+      "caution": "Does not add firmware support for unavailable sleep states. Modern Standby is different from legacy S3.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/sleep-settings-allow-sleep-states"
+    },
+    {
+      "guid": "a4b195f5-8225-47d8-8012-9d41369786e2",
+      "alias": "SYSTEMREQUIRED",
+      "summary": "Determines whether application system-required requests can prevent idle-triggered automatic sleep.",
+      "caution": "Ignoring a valid power request can interrupt running activities. Examine powercfg /requests first.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/sleep-settings-allow-system-required-requests"
+    },
+    {
+      "guid": "3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e",
+      "alias": "VIDEOIDLE",
+      "summary": "Time in seconds before Windows turns off the display after user inactivity.",
+      "caution": "0 disables the display idle timeout. Lock-screen or managed policy settings can affect actual behavior.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/display-settings-display-idle-timeout"
+    },
+    {
+      "guid": "6738e2c4-e8a5-4a42-b16a-e040e769756e",
+      "alias": "DISKIDLE",
+      "summary": "Disk idle timeout; predominantly useful for devices that can spin down or enter supported idle modes.",
+      "caution": "Microsoft states this idle policy is not used on Modern Standby Windows clients; applicability also varies by storage hardware.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/ipm-hard-disk-drive-idle-timeout"
+    },
+    {
+      "guid": "48e6b7a6-50f5-4782-a5d4-53bb8f07e226",
+      "alias": "USBSELECTIVE",
+      "summary": "Controls USB selective suspend policy for idle USB devices and hub ports.",
+      "caution": "Microsoft generally recommends retaining selective suspend to conserve energy. Device drivers determine the actual behavior.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-selective-suspend"
+    },
+    {
+      "guid": "ee12f906-d277-404b-b6da-e5fa1a576df5",
+      "alias": "ASPM",
+      "summary": "PCI Express link-state power-management preference, from off to moderate or maximum savings.",
+      "caution": "PCIe device, root-port, firmware and platform support determine which link states are usable.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/pci-express-settings-link-state-power-management"
+    },
+    {
+      "guid": "12bbebe6-58d6-4636-95bb-3217ef867c1a",
+      "alias": "Wireless adapter power saving",
+      "summary": "Power-saving preference for the wireless adapter. Compatibility and operational behavior depend on the adapter driver and access point.",
+      "caution": "Microsoft recommends consulting the wireless adapter manufacturer before choosing stronger 802.11 power-saving modes.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/managing-battery-life-and-power-consumption-overview-technicalreference?view=windows-11"
+    },
+    {
+      "guid": "96996bc0-ad50-47ec-923b-6f41874dd9eb",
+      "alias": "SleepButtonAction",
+      "summary": "Defines the action taken when a dedicated sleep button is pressed.",
+      "caution": "Only applicable where the system exposes a corresponding button and action.",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/power-button-and-lid-settings-sleep-button-action"
+    }
+  ],
+  "categories": [
+    {"name": "CPU & performance", "summary": "Performance states, boosting and processor-idle policies; silicon-vendor tuning matters.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/configure-processor-power-management-options"},
+    {"name": "Sleep & hibernation", "summary": "Sleep entry, wake timers, hibernation and app power requests. Verify supported states separately.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/sleep-settings"},
+    {"name": "Display & graphics", "summary": "Display inactivity, brightness and video-related energy choices, where registered.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/configure-power-settings"},
+    {"name": "Storage & disks", "summary": "Media idle policies; do not assume legacy HDD settings govern NVMe or Modern Standby.", "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/ipm-hard-disk-drive-idle-timeout"},
+    {"name": "USB & peripherals", "summary": "Port and device idle/suspend policies. Drivers may implement additional independent controls.", "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-selective-suspend"},
+    {"name": "PCI Express", "summary": "Link power-management preferences; actual capabilities depend on the platform and devices.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/pci-express-settings"},
+    {"name": "Network & connectivity", "summary": "Wireless and network energy preferences and wake capabilities. Wake settings also exist outside power plans.", "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/managing-battery-life-and-power-consumption-overview-technicalreference?view=windows-11"},
+    {"name": "Battery", "summary": "Battery-related thresholds and responses, if registered by the platform.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/configure-power-settings"},
+    {"name": "Power buttons & lid", "summary": "Lid, system power and sleep button actions; availability depends on the hardware.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/power-button-and-lid-settings"},
+    {"name": "Media & playback", "summary": "Power policies for media playback/sharing. Actual values come from Windows.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/configure-power-settings"},
+    {"name": "General system", "summary": "Global power-plan settings not covered by a device-specific subgroup.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/configure-power-settings"},
+    {"name": "Other settings", "summary": "Registered settings without a verified category match. No functional assumptions are made.", "url": "https://learn.microsoft.com/en-us/windows/win32/power/power-management-functions"}
+  ],
+  "deviceClasses": [
+    {"class": "USB", "summary": "USB hubs and controllers may suspend ports independently. Wake and runtime-idle support are driver-dependent.", "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-selective-suspend"},
+    {"class": "Net", "summary": "Network wake permissions differ from Wi-Fi link-power policies. Consult adapter and driver properties.", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/device-specific-power-management-for-modern-standby"},
+    {"class": "Bluetooth", "summary": "Bluetooth runtime power and wake capabilities depend on the radio, host controller and driver.", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/device-specific-power-management-for-modern-standby"},
+    {"class": "DiskDrive", "summary": "Storage idle behavior differs among HDD, SSD and Modern Standby configurations.", "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/ipm-hard-disk-drive-idle-timeout"},
+    {"class": "Display", "summary": "Display power policies differ from graphics-driver power management. Consult the corresponding adapter or monitor driver.", "url": "https://learn.microsoft.com/en-us/windows-hardware/customize/power-settings/configure-power-settings"},
+    {"class": "Battery", "summary": "Battery reporting is platform-dependent; a battery policy does not imply every battery metric is exposed.", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/modern-standby-sleepstudy"},
+    {"class": "HIDClass", "summary": "HID devices may use selective suspend. Wake eligibility is determined separately by driver and firmware.", "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/hid/selective-suspend-for-hid-over-usb-devices"}
+  ],
+  "general": [
+    {"name": "Sleep study", "summary": "Modern Standby diagnostic report, where supported.", "command": "powercfg /sleepstudy", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/modern-standby-sleepstudy"},
+    {"name": "Energy analysis", "summary": "Power efficiency and device warnings from the Windows power diagnostics utility.", "command": "powercfg /energy", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options"},
+    {"name": "Sleep states", "summary": "Lists actual supported and unavailable sleep states and reasons.", "command": "powercfg /a", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/overview-of-modern-standby-validation"},
+    {"name": "Power requests", "summary": "Lists active system/display/awaymode power requests that may prevent sleep.", "command": "powercfg /requests", "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options"}
+  ]
+}
