@@ -40,7 +40,7 @@ Sectional UI and manual collection increment (2026-10-28):
   value validation, native setting collection, backup and catalog export, plus
   the Apply click handler, remain text-identical to the prior UI commit.
 
-Local UI increment (2026-10-28, codex/ui-first-layout):
+Earlier UI increment (2026-10-28):
 * Browsing controls occupy their own resizing row. Actions and the editing
   checkbox are on a separate wrapping row, without horizontal scrolling.
 * Setting details resize with the window and splitters. Plugged in (AC) and
@@ -118,7 +118,7 @@ PRIVILEGE & SAFETY
 KNOWN LIMITS
 ------------
 - The original package reported static Linux checks only. This UI increment
-  passed syntax checks in local Windows PowerShell 5.1.22621.7649 and isolated
+  passed syntax checks in local Windows PowerShell 5.1 and isolated
   sample-data layout checks at 1230x790 and 990x680, at the session's current
   display scaling. Numeric and choice editors, disabled-by-default editing,
   checkbox transitions and the separate mode indicator were checked.
@@ -137,8 +137,9 @@ KNOWN LIMITS
 - Optional device drivers may expose power controls outside power plans;
   these require distinct adapters and are not silently included in plan edits.
 
-PowerExplorer_SHA256SUMS.txt is preserved from the original imported archive.
-Its checksums describe that archive version, not this modified UI branch.
+PowerExplorer_SHA256SUMS.txt records the current packaged source files and
+documentation. It was regenerated for the clean build and is refreshed when
+those files change.
 
 Restoring an exported plan creates an imported power scheme:
     powercfg /import "C:\path\backup.pow"
