@@ -132,3 +132,11 @@ content from any shared diagnostic material.
 
 No standalone project license is included in this tree. Existing notices and
 reference material are preserved.
+
+## Project directory and related work
+
+[Browse the dastardlyrat project directory](https://dastardlyrat.github.io/).
+
+- [WindowsSecuritySettingsExplorer](https://github.com/dastardlyrat/WindowsSecuritySettingsExplorer)
+- [LatticeSecurityDashboard](https://github.com/dastardlyrat/LatticeSecurityDashboard)
+- [WindowsFirewallDashboard](https://github.com/dastardlyrat/WindowsFirewallDashboard)
